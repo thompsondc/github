@@ -27,7 +27,17 @@ Set default branch name for all new gits:
     git log
 
 ## Create SSH key ##
+*Make sure in ~/.ssh/
+	ssh-keygen -t ed25519 -C "thompsondc@hotmail.com"
+> *add passphrase*
 
+Tell OS to use the ssh key:
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/*keyname*
+
+Export public key for adding to Github:
+	cat *keyname*.pub
+> *copy/paste this to Github*
 
 ## Remote Git Creation ##
 You can use the [gh] command-line tool to create a remote repository on Github from the command-line:
