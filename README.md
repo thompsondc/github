@@ -43,3 +43,9 @@ Export public key for adding to Github:
 You can use the [gh] command-line tool to create a remote repository on Github from the command-line:
     git repo create
 > The command will prompt for several choices:
+
+## Change Remote URL (SSH) ##
+    git remote set-url {remotename} git@github.com:{username}/repo
+
+## Push to remote ##
+    git push {remotename} {branchname}
